@@ -26,19 +26,26 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
+  color: #f5fcfe;
 }
 
 #sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-wrap: wrap;
   height: fit-content;
   width: fit-content;
-  background-color: #018377;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#sidebar > article {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-  border: 2px solid #a4ede6;
-  border-radius: 5px;
-  color: #fff;
+}
+.about-me {
+  background-color: #007bb5;
 }
 
 #footer {
@@ -58,8 +65,8 @@ body {
   grid-template-areas:
     'nav'
     'banner'
-    'sidebar'
     'main'
+    'sidebar'
     'footer';
 }
 
@@ -109,7 +116,7 @@ body {
     width: 25vw;
   }
   #main > article {
-    max-width: 300px;
+    max-width: 280px;
   }
   #main {
     width: 70vw;
@@ -142,4 +149,35 @@ li a:hover {
   background-color: #2a77aa;
   color: white;
   border-radius: 10px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
