@@ -1,0 +1,40 @@
+@import url('main.css');
+
+input[type='text'],
+input[type='submit'] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type='checkbox'] {
+  margin-top: 16px;
+}
+
+input[type='submit'] {
+  background-color: #0f2b3d;
+  color: white;
+  border: none;
+}
+input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+section {
+  max-width: 100vw;
+  min-width: 50vw;
+  background-color: #2a77aa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #f5fcfe;
+}
+
+@media only screen and (min-width: 768px) {
+  #main {
+    margin-left: 50px;
+  }
+}

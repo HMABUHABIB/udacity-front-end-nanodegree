@@ -1,0 +1,15 @@
+@import url('main.css');
+
+.img-card {
+  background-color: #2a77aa;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #f5fcfe;
+  width: fit-content;
+  height: fit-content;
+}
+
+.img-card > img {
+  width: 20vw;
+}

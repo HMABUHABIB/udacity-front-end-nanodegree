@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 body {
   background-color: #e5eff5;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -18,15 +19,6 @@ body {
   flex-wrap: wrap;
   height: fit-content;
   width: auto;
-}
-
-#main > article {
-  max-width: fit-content;
-  background-color: #2a77aa;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  color: #f5fcfe;
 }
 
 #sidebar {
@@ -113,7 +105,7 @@ body {
       'footer footer footer footer';
   }
   #sidebar {
-    width: 25vw;
+    width: 22.5vw;
   }
   #main > article {
     max-width: 280px;
@@ -185,11 +177,13 @@ li a:hover {
 .about-me {
   display: flex;
   flex-wrap: wrap;
+  font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .img-husam {
   margin: 10px;
   background-color: #e5eff5;
-  border-radius: 45%;
   width: 18vw;
   height: 18vw;
+  border-radius: 10px;
 }

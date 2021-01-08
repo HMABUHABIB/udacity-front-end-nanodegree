@@ -1,0 +1,17 @@
+@import url('main.css');
+
+#main > article {
+  background-color: #2a77aa;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #f5fcfe;
+}
+
+h2 {
+  color: #1f2932;
+}
+
+p > a {
+  color: #014052;
+}
