@@ -1,0 +1,13 @@
+@import url('main.css');
+
+#impressum {
+  background-color: #2a77aa;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#impressum > a {
+  color: white;
+}

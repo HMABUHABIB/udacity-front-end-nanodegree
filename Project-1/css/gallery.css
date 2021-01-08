@@ -12,4 +12,11 @@
 
 .img-card > img {
   width: 20vw;
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: 0.5;
+}
+
+.img-card > img:hover {
+  opacity: 1;
 }
