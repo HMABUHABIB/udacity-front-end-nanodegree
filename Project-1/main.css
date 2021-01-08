@@ -17,11 +17,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  width: 70vw;
+  width: auto;
 }
 
 #main > article {
-  max-width: 300px;
+  max-width: fit-content;
   background-color: #2a77aa;
   padding: 10px;
   margin: 10px;
@@ -107,6 +107,12 @@ body {
   }
   #sidebar {
     width: 25vw;
+  }
+  #main > article {
+    max-width: 300px;
+  }
+  #main {
+    width: 70vw;
   }
 }
 
