@@ -1,5 +1,6 @@
 @import url('main.css');
-
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 #main > article {
   background-color: #2a77aa;
   padding: 10px;
@@ -9,9 +10,13 @@
 }
 
 h2 {
+  font-family: 'Muli', sans-serif;
   color: #1f2932;
 }
-
+p,
+blockquote {
+  font-family: 'Quicksand', sans-serif;
+}
 p > a {
   color: #014052;
 }
