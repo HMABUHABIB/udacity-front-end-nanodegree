@@ -181,3 +181,15 @@ li a:hover {
   background: #bb0000;
   color: white;
 }
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-husam {
+  margin: 10px;
+  background-color: #e5eff5;
+  border-radius: 45%;
+  width: 18vw;
+  height: 18vw;
+}
