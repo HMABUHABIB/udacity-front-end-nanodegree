@@ -9,6 +9,10 @@
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
 /* ---- Base Rules ---- */
+:root {
+  --height: 50%;
+}
+
 body {
   background: rgb(136, 203, 171);
   background: linear-gradient(
@@ -102,10 +106,11 @@ section {
   padding: 1em;
   font-weight: bold;
   color: #000;
+  text-decoration: none;
 }
 
 .menu__link_active {
-  text-decoration: underline;
+  background-color: #568481;
 }
 
 .navbar__menu .menu__link:hover {
@@ -337,4 +342,18 @@ section.your-active-class .landing__container::after {
     visibility: hidden;
     z-index: 100;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: var(--height);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #568481, #497378, #1d3351);
 }

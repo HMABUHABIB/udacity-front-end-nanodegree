@@ -52,7 +52,7 @@
 
 // Build menu 
 
-
+let root = document.documentElement;
 // Set sections as active
 const topLink = document.querySelector(".top-link");
 const navbar__list = document.getElementById('navbar__list');
@@ -102,21 +102,27 @@ document.addEventListener('scroll', function (e) {
  clearTimeout(timeout);
  // then create a fresh, new timeout
  timeout = setTimeout(function (e) {
-  // navigate to specifc 
-  console.log(window.pageYOffset);
+  //show and remove the up link
+  //console.log(window.pageYOffset);
   if (window.pageYOffset > 750) {
    topLink.classList.add('show-link');
   }
   else {
    topLink.classList.remove('show-link');
   }
+  let percanting = (window.pageYOffset / document.body.clientHeight) * 100;
+  const progressbar = document.getElementById('progressbar');
+  progressbar.style.setProperty('--height', `${percanting * 1.2}%`);
+  document.getElementById("progressbar").style.color = "blue";
+  //console.log(percanting);
+
+
  }, 250);
 
 
 });
-
+// navigate to top 
 topLink.addEventListener('click', function (e) {
- // navigate to top 
  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -135,7 +141,8 @@ for (let i = 0; i < acc.length; i++) {
  });
 }
 
-
+/* Sandy chatbot */
+/*
 (function (d, m) {
  var kommunicateSettings =
   { "appId": "e37c337240cf460b2d79ddafee541516", "popupWidget": true, "automaticChatOpenOnNavigation": true };
