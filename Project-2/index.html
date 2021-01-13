@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sandy</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
+    <main>
+      <header class="main__hero">
+        <h1>Sandy</h1>
+        <h3>Virtual Assistant for International Students</h3>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="About_me" data-nav="About me" class="your-active-class">
+        <div class="landing__container">
+          <h2>About me</h2>
+          <p>
+            Are you an international student at Bielefeld University? I am here
+            to assist you in university matters and beyond. I am your virtual
+            assistant available 24/7.
+          </p>
+          <p>
+            Examples of questions that could be asked: Where can I play
+            football? Do you know any restaurant near to university? Where is
+            the International office? where can I get my semester ticket? For
+            more example visit Sandy Skills page.
+          </p>
+          <p>
+            I would also like to invite you to participate in the Focused Group
+            Discussion (FGD). In case you’re interested, please confirm your
+            participation in FDG by filling this form out.
+          </p>
+          <p>
+            ⇯ Sandy is a virtual assistant aimed to support the international
+            students in their daily needs developed by a master’s student at our
+            university as a part of his master’s thesis project. It is supported
+            by the International Student Council(ISR). We appreciate your
+            participation to take part in developing this project. Please feel
+            free to leave any suggestions through eMail.
+          </p>
+        </div>
+      </section>
+
+      <section id="Sandy_Skills" data-nav="Sandy Skills">
+        <div class="landing__container">
+          <h2>Sandy Skills</h2>
+
+
+          <button class="accordion">Accommodation</button>
+          <div class="panel">
+            <p>Where can I find residents for students?</br>
+          I'm looking for a room.	</b>
+            </p>
+          </div>
+          
+          <button class="accordion">Tram and Bus Timetable From Universität Station.</button>
+          <div class="panel">
+            <p>Bus</br>
+          <p>Tram</br>
+          <p>train</br>
+          </div>
+          
+          <button class="accordion">BITS IT-Servicezentrum</button>
+          <div class="panel">
+            <p>where i can use computer	</br>
+          Can the university help me to fix my broken laptop?	</p>
+          </div>
+          
+          <button class="accordion">City leisure activities</button>
+          <div class="panel">
+            <p>What to do in the city?	</br>
+          Things to do in Bielefeld	</p>
+          </div>
+          
+          <button class="accordion">Club Party</button>
+          <div class="panel">
+            <p>What students clubs are there in the university?	</br>
+          Where is the university pub?	</p>
+          </div>
+          <button class="accordion">Hochschulsport</button>
+          <div class="panel">
+            <p>Do we have Table tennis in uni	</br>
+          What is the Hochschulsport schedule?	</p>
+          </div>
+          <button class="accordion">Lost and Found</button>
+          <div class="panel">
+            <p>I found a bag what shall I do	</br>
+          What to do if I lost my unicard?	</p>
+          </div>
+          
+          <button class="accordion">Mensa Menu</button>
+          <div class="panel">
+            <p>what to eat today ?	</br>
+          Where can I find the Mensa menu?	</p>
+          </div>
+          
+          <button class="accordion">Place address</button>
+          <div class="panel">
+            <p>Where is Mensa?	</br>
+          where is isr ?	</p>
+          </div>
+          
+          <button class="accordion">Place opening Time</button>
+          <div class="panel">
+            <p>When are ISR office hours?	</br>
+          when mensa is open ?	</p>
+          </div>
+          
+          <button class="accordion">Place to Eat</button>
+          <div class="panel">
+            <p>Do you know any restaurant near to university?	</br>
+          where i can eat near uni ?	</p>
+          </div>
+          
+          <button class="accordion">Print and scan</button>
+          <div class="panel">
+            <p>where i can print or scan ?	</br>
+          Where can i print my thesis?	</p>
+          </div>
+          
+          
+          <button class="accordion">PunktUm Languages class</button>
+          <div class="panel">
+            <p>I want to learn russian 	</br>
+          Where can I find german courses?	</p>
+          </div>
+          
+          <button class="accordion">Scholarship</button>
+          <div class="panel">
+            <p>Do you have financial support ?	</br>
+          I need a scholarship.	</p>
+          </div>
+          
+          <button class="accordion">Semester ticket</button>
+          <div class="panel">
+            <p>how can I generate the semester ticket ?	</br>
+          where i can drive with my semsters ticket ?	</p>
+          </div>
+          
+          
+          <button class="accordion">Shopping</button>
+          <div class="panel">
+            <p>where is the nearest supermarkt ?	</br>
+          where I can do shopping ?	</p>
+          </div>
+          
+          <button class="accordion">Unifit</button>
+          <div class="panel">
+            <p>where i can go for exercise ?	</br>
+          Does university has a gym?	</p>
+          </div>
+          
+          <button class="accordion">Unicard</button>
+          <div class="panel">
+            <p>what should I do to get a new Unicard?	</br>
+          where I can get a new student ID ?	</p>
+          </div>
+          
+          
+          <button class="accordion">Not Supported Skills</button>
+          <div class="panel">
+            <p>Sandy Skills will not include the Small Talk conversation</p>
+          </div>
+          
+          <button class="accordion">Upcoming Skills</button>
+          <div class="panel">
+            <p><b>Sandy project</b>: This project is an open-end project, in which we will not be able to add all the skills in one time. So please, if you think there are some more skills we need to add or improve it, you are always welcome to contact us via <a href="mailto:hmabuhabib@uni-bielefeld.de">eMail</a> or just share it with Sandy in chat box. or just share it with Sandy in chat box.  or just share it with Sandy in chat box.</p>
+          </div>
+          
+
+        </div>
+      </section>
+      <section id="impressum" data-nav="Impressum">
+        <div class="landing__container">
+          <h2>Impressum</h2>
+          <p>
+            Husam AbuHabib <br />
+            Internationaler Studierenden Rat-ISR Bielefeld University<br />
+            Universität Bielefeld<br />
+            Universitätsstraße 25 <br />
+            33615 Bielefeld <br />
+            Telefon:+49 0521 106 3430 <br />
+            E-Mail: isr[at]uni-bielefeld[punkt]de<br />
+            <a href="www.isr-uni-bielefeld.de"
+              >Internet: www.isr-uni-bielefeld.de</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity Front-End Web Developer Nanodegree Project by Husam Abuhabib.</p>
+    </footer>
+    <!-- back to top -->
+    <a href="#home" class="top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="js/app.js"></script>
+  </body>
+</html>
