@@ -357,7 +357,7 @@ section.your-active-class .landing__container::after {
   border-radius: 10px;
   background: linear-gradient(to bottom, #568481, #497378, #1d3351);
   transition-property: height;
-  transition-duration: 5s;
+  transition-duration: 2s;
 }
 #progressbarBackground {
   position: fixed;
