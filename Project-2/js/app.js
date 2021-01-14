@@ -14,47 +14,8 @@
 */
 
 
-
-/**
- * Define Global Variables
- * 
-*/
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-let root = document.documentElement;
 // Set sections as active
-const topLink = document.querySelector(".top-link");
+
 const navbar__list = document.getElementById('navbar__list');
 // Build menu 
 const sectionList = document.querySelectorAll('section');
@@ -79,13 +40,10 @@ scrollLinks.forEach(function (link) {
   let scrollDiv = document.getElementById(id).offsetTop;
   window.scrollTo({ top: scrollDiv + 40, behavior: 'smooth' });
   updateCSS(id);
-  //link.classList.remove("menu__link_active");
-  console.log(e.currentTarget.classList);
  });
 });
 
-
-
+/* Function to update the css class for the selected section */
 function updateCSS(id) {
  sectionList.forEach(function (section) {
   if (section.id === id) {
@@ -97,31 +55,31 @@ function updateCSS(id) {
 }
 
 let timeout = null;
+const progressbar = document.getElementById('progressbar');
 document.addEventListener('scroll', function (e) {
  // clear any previously queued up timeout
  clearTimeout(timeout);
  // then create a fresh, new timeout
  timeout = setTimeout(function (e) {
   //show and remove the up link
-  //console.log(window.pageYOffset);
+
   if (window.pageYOffset > 750) {
    topLink.classList.add('show-link');
   }
   else {
    topLink.classList.remove('show-link');
   }
-  let percanting = (window.pageYOffset / document.body.clientHeight) * 100;
-  const progressbar = document.getElementById('progressbar');
-  progressbar.style.setProperty('--height', `${percanting * 1.2}%`);
-  document.getElementById("progressbar").style.color = "blue";
-  //console.log(percanting);
 
+  /**  update the progressbar  */
+  let percanting = (window.pageYOffset / document.body.clientHeight) * 100;
+  progressbar.style.setProperty('--height', `${percanting * 1.2}%`);
 
  }, 250);
 
 
 });
 // navigate to top 
+const topLink = document.querySelector(".top-link");
 topLink.addEventListener('click', function (e) {
  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -140,16 +98,4 @@ for (let i = 0; i < acc.length; i++) {
   }
  });
 }
-
-/* Sandy chatbot */
-/*
-(function (d, m) {
- var kommunicateSettings =
-  { "appId": "e37c337240cf460b2d79ddafee541516", "popupWidget": true, "automaticChatOpenOnNavigation": true };
- var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
- s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
- var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
- window.kommunicate = m; m._globals = kommunicateSettings;
-})(document, window.kommunicate || {});
-/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
 
