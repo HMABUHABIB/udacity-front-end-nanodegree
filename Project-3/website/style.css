@@ -30,13 +30,13 @@ body {
 /**************************/
 #app {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 350px 350px 1fr;
   grid-template-rows: 200px 150px 150px 150px auto;
   grid-template-areas:
-    'header header'
-    'zip feel'
-    'generate generate'
-    'entry entry';
+    'header header header header'
+    '.  zip feel .'
+    'generate generate generate generate'
+    'entry entry entry entry';
   height: 100vh;
   color: whitesmoke;
   justify-content: center;
@@ -51,11 +51,11 @@ body {
 }
 .zip {
   grid-area: zip;
-  margin-left: 100px;
+  margin: auto;
 }
 .feel {
   grid-area: feel;
-  margin-right: 100px;
+  margin: auto;
   text-align: center;
 }
 .entry {
