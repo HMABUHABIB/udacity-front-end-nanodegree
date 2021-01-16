@@ -3,17 +3,9 @@
 //const { error } = require("console");
 
 // Create a new date instance dynamically with JS
-var currentdate = new Date();
-var datetime = "Last Sync: " + currentdate.getDate() + "/"
-  + (currentdate.getMonth() + 1) + "/"
-  + currentdate.getFullYear() + " @ "
-  + currentdate.getHours() + ":"
-  + currentdate.getMinutes() + ":"
-  + currentdate.getSeconds();
 
 let d = new Date();
-let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear() + " Time:" + d.getHours() + ":"
-  + d.getMinutes();
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear() + " Time:" + d.getHours() + ":" + d.getMinutes();
 let zipField = document.querySelector('#zip');
 const API_Key = '4964517d2628ee5cfcffcfe8021efd92';
 let feelingsField = document.querySelector('#feelings');
@@ -25,7 +17,8 @@ generateBtn.addEventListener('click', function (e) {
 
     getWeathermapData(zipField.value);
   } else
-    console.log("Error");
+    alert("Please fill in the zip to get the weather data.");
+
 
 });
 
@@ -37,7 +30,6 @@ const getAlldata = async () => {
 
   try {
     const data = await res.json();
-
     return data;
   } catch (error) {
     console.log("Error in getAlldata", error);
@@ -45,19 +37,24 @@ const getAlldata = async () => {
   }
 }
 
-
+function clearFiled() {
+  zipField.value = null;
+  feelingsField.value = null;
+  console.log('clear is done');
+}
 
 // fetch the data from Weathermap website
 const getWeathermapData = async (zip) => {
 
   try {
-    const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${API_Key}&units=metric`)
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${API_Key}&units=metric`)
     const data = await res.json();
 
     if (data.cod == 200) {
       postData('http://localhost:5500/addData', { temperature: data, date: newDate, user_response: feelingsField.value });
       getAlldata()
         .then(data => updateUI(data))
+        .then(clearFiled)
         .catch("Error in then fun");
       return data;
     } else {
@@ -107,14 +104,13 @@ function updateUI(data) {
   }
 
   element.innerHTML = `  <div class="weatherCard active" id="entryHolder">
- <h4>Current Weather in ${data[data.length - 1].temperature.name} , ${data[data.length - 1].temperature.sys.country}</h4>
-<div id="date:">Date: ${data[data.length - 1].date}</div>
-<div id="temp:">Temperatur: ${data[data.length - 1].temperature.main.temp}</div>
-<div id="content">Feelings: ${data[data.length - 1].feelingsField}</div>
-<img id="openweathermap_icon" src="http://openweathermap.org/img/wn/${data[data.length - 1].temperature.weather[0].icon}@2x.png" alt="openweathermap icon">
+ <h4>Current Weather in ${data.temperature.name} , ${data.temperature.sys.country}</h4>
+<div id="date:">Date: ${data.date}</div>
+<div id="temp:">Temperatur: ${data.temperature.main.temp}</div>
+<div id="content">Feelings: ${data.feelingsField}</div>
+<img id="openweathermap_icon" src="https://openweathermap.org/img/wn/${data.temperature.weather[0].icon}@2x.png" alt="openweathermap icon">
 </div>`;
   entry.insertBefore(element, entry.firstChild);
-
 
 }
 
