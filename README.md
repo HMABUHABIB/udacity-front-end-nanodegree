@@ -6,4 +6,4 @@ Poject list:
 2. Landing Page
 [Github](https://github.com/HMABUHABIB/udacity-front-end-nanodegree/tree/main/Project-2) [Live link](https://hmabuhabib.github.io/udacity-front-end-nanodegree/Project-2/)
 3. Weather Journal App
-[Github](https://github.com/HMABUHABIB/udacity-front-end-nanodegree/tree/main/Project-3) [Live link](https://bittersweet-ballistic-vinyl.glitch.me/)
+[Github](https://github.com/HMABUHABIB/udacity-front-end-nanodegree-Project-3) [Live link](https://bittersweet-ballistic-vinyl.glitch.me/)
