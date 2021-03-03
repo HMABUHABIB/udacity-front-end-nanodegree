@@ -11,7 +11,7 @@ Poject list:
 [Github](https://github.com/HMABUHABIB/udacity-front-end-nanodegree-Project-4) [Live link](https://hmabuhabib.github.io/udacity-front-end-nanodegree-Project-4/dist/)
 5. Travel App
 [Github](https://github.com/HMABUHABIB/udacity-front-end-nanodegree-Project-5) [Live link](https://hmabuhabib.github.io/udacity-front-end-nanodegree-Project-5/dist/) (The app could have some delay in showing the results because the free server backend needs time to wake up. 😉)
-- **Note: The codes in most of the projects above can be programmed in a more efficient way, but that was the requirement in the course to do in that way!** 
+- **Note: The codes in the projects above can be programmed in a more efficient way, but that was the requirement in the course to do in that way!** 
 
 [<img src="https://raw.githubusercontent.com/HMABUHABIB/hmabuhabib.github.io/main/img/Udacity.png">](https://graduation.udacity.com/confirm/ELW5WCKM)
 
