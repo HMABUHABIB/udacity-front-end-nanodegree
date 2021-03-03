@@ -14,4 +14,4 @@ Poject list:
 
 [<img src="https://raw.githubusercontent.com/HMABUHABIB/hmabuhabib.github.io/main/img/Udacity.png">](https://graduation.udacity.com/confirm/ELW5WCKM)
 
-# Note: The codes in most of the projects above can be programmed in a more efficient way, but that was the requirement in the course to do in that way!
+** Note: The codes in most of the projects above can be programmed in a more efficient way, but that was the requirement in the course to do in that way! ** 
